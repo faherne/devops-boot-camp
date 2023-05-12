@@ -111,7 +111,7 @@ public class WebPageController {
         htmlString = htmlString.replace("$hostName", InetAddress.getLocalHost().getHostName());
         return htmlString;
     }
-    public String getService(String name, String htmlService) throws UnknownHostException{
+    public String getService(String name, String htmlService){
         htmlService=htmlService.replace("$name", name);
         return htmlService;
 
