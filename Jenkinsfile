@@ -32,7 +32,7 @@ pipeline {
     }
     stage ('Analyzing Code Quality') {
       steps {
-        sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=faherne_devops-boot-camp -Dsona.Organization=faherne -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=2a28231ad86c56591a55a9563e3ebeed9fb76ec5'
+        sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=faherne_devops-boot-camp -Dsonar.organization=faherne -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=2a28231ad86c56591a55a9563e3ebeed9fb76ec5'
       }
     }
     stage('Deploy application using Ansible') {
